@@ -63,5 +63,3 @@ struct Centroid {
         rec(1, 0);
     }
 };
-
-Centroid<int> g(maxn);

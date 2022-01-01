@@ -22,7 +22,7 @@ struct sparse_table {
 
     int find_min(int l, int r) {
         if (r < l)
-            return inf;
+            return INT_MAX;
 
         int j = LOG[r - l + 1];
         return f(t[l][j], t[r - (1 << j) + 1][j]);
@@ -30,7 +30,7 @@ struct sparse_table {
 
     int find(int l, int r) {
         if (r < l)
-            return inf;
+            return INT_MAX;
         
         int ans = 0;
         for (int j = 25; j >= 0; j--) {
